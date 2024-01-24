@@ -16,16 +16,17 @@
     }
   </script>
   
-  <div class="w-full">
-      <div class="w-full flex items-center justify-between cursor-pointer" transition:slide>
-          <div class="" on:click={handleClick}>
-              <slot name="head"></slot>	
-          </div>
-          
-          <button on:click={handleClick} >
+    <div class="w-full">
+        <div class="w-full flex items-center justify-between cursor-pointer" transition:slide>
+            <div class="" on:click={handleClick}>
+                <slot name="head"></slot>	
+            </div>
+            
+            <button on:click={handleClick} >
                 {@html icon}
-          </button>
-      </div>
+            </button>
+        </div>
+        <slot name="sub-head"></slot>	
       
       {#if open}
       <div class="details" transition:slide>

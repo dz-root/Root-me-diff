@@ -22,7 +22,7 @@ export let profile_user_2 = {}
             </div>
            <div class="flex">
             <div class="flex items-center px-2">
-                <img src="https://www.root-me.org/squelettes/img/valid.svg" alt="Rank" class="w-8 mr-2">
+                <img src="https://www.root-me.org/squelettes/img/valid.svg" alt="Score" class="w-8 mr-2">
                 <div class="flex flex-col">
                     <p class="font-bold text-yellow-500">{profile_user_1.stat.score}</p>
                     <span class="text-xs italic text-yellow-300">Score</span>
@@ -35,8 +35,8 @@ export let profile_user_2 = {}
                     <span class="text-xs italic text-yellow-300">Rank</span>
                 </div>
             </div>
-            <div class="flex items-center px-2">
-                <img src=" https://www.root-me.org/IMG/logo/rubon5.svg" alt="Rank" class="w-8 mr-2">
+            <div class="flex lg:hidden xl:flex items-center px-2">
+                <img src=" https://www.root-me.org/IMG/logo/rubon5.svg" alt="challanges" class="w-8 mr-2">
                 <div class="flex flex-col">
                     <p class="font-bold text-yellow-500">{profile_user_1.stat.chall_done}</p>
                     <span class="text-xs italic text-yellow-300">Challenges</span>
