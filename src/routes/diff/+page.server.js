@@ -4,26 +4,28 @@ import { redirect } from '@sveltejs/kit'
 import { RankIncon } from '$lib/utils/UserRankIcon.js'
 import OrderByCategory from '$lib/utils/OrderByCategory.js'
 
-let challenges = [], challenges_2 = []
-let groupedByCategory  = [], groupedByCategory_2 = []
 
-let profile_user_1 = {
-    logo : '',
-    nickname : '',
-    stat: { rank: null, score:null, chall_done:null },
-    rank_icon : '',
-    rank_title : '',
-}
-
-let profile_user_2 = {
-    logo : '',
-    nickname : '',
-    stat: { rank: null, score:null, chall_done:null },
-    rank_icon : '',
-    rank_title : '',
-}
 
 export const load = async ({ request, url, setHeaders }) => {
+    
+    let result= []
+    let challenges = [], challenges_2 = []
+
+    let profile_user_1 = {
+        logo : '',
+        nickname : '',
+        stat: { rank: null, score:null, chall_done:null },
+        rank_icon : '',
+        rank_title : '',
+    }
+
+    let profile_user_2 = {
+        logo : '',
+        nickname : '',
+        stat: { rank: null, score:null, chall_done:null },
+        rank_icon : '',
+        rank_title : '',
+    }
 
     setHeaders({
         'cache-control': 'max-age=86400',
@@ -64,12 +66,10 @@ export const load = async ({ request, url, setHeaders }) => {
                 const category = link.attribs.href.split("/")[2];
                 const name = cheerio(link).text().split("\xa0")[1];
                 const points = link.attribs.title.split(" ")[0];
-                const userDone = link.attribs.class === ' vert';
+                const user_1_flagged = link.attribs.class === ' vert';
         
-                challenges.push({ category, name, points, userDone });
+                challenges.push({ category, name, points, user_1_flagged });
             });
-            
-            groupedByCategory = OrderByCategory(challenges)
                 
         }else{
             redirect(307, '/')
@@ -94,18 +94,27 @@ export const load = async ({ request, url, setHeaders }) => {
                 const category = link.attribs.href.split("/")[2];
                 const name = cheerio(link).text().split("\xa0")[1];
                 const points = link.attribs.title.split(" ")[0];
-                const userDone = link.attribs.class === ' vert';
+                const user_2_flagged = link.attribs.class === ' vert';
         
-                challenges_2.push({ category, name, points, userDone });
+                challenges_2.push({ category, name, points, user_2_flagged });
             });
-        
-            groupedByCategory_2 = OrderByCategory(challenges_2)
         
         }else{
             redirect(307, '/')
         }
 
-        return { profile_user_1, profile_user_2,  groupedByCategory,  groupedByCategory_2}
+        challenges.forEach((x)=>{
+            challenges_2.forEach(o=>{
+                if(x.name==o.name){
+                    result.push(Object.assign({},o,x))
+                }
+                
+            })
+        })
+        
+        result= OrderByCategory(result)
+
+        return { profile_user_1, profile_user_2, result}
 
     }else{
         redirect(307, '/')

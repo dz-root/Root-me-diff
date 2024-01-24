@@ -33,7 +33,7 @@
 </svelte:head>
 
 
-<div class:hidden={loader} class="flex flex-col items-center justify-center">
+<div class:hidden={loader} class="flex flex-col items-center justify-center w-full">
 
 	<div class="flex flex-col items-center ">
 		<div class="flex flex-col items-center justify-center space-y-4 p-5 border border-indigo-600/30 rounded-lg shadow-xl shadow-indigo-600/20 bg-indigo-900/5">
@@ -49,6 +49,6 @@
 </div>
 
 
-<div class:hidden={!loader} class="flex flex-col items-center justify-center">
+<div class:hidden={!loader} class="w-full h-full flex flex-col items-center justify-center">
 	<img src="./logo.png" alt="loader" class="animate-pulse">
 </div>

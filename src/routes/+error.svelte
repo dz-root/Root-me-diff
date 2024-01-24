@@ -2,7 +2,7 @@
 	import { page } from '$app/stores'
 </script>
 
-<div class="flex flex-col items-center justify-center">
+<div class="w-full h-full flex flex-col items-center justify-center">
 	<code class="text-xl">{$page.status}: {$page.error.message}</code>
 
 	{#if $page.status === 500}
