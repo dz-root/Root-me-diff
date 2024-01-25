@@ -27,9 +27,9 @@
 
             <p class="text-white text-xs text-center italic font-bold uppercase mt-1">
                 {#if profile_user_1.stat.score > profile_user_2.stat.score}
-                    Won the DIFF battel against <span class=" text-yellow-400 bg-orange-900 px-2 py-0.5 rounded-full mt-5">{ profile_user_2.nickname}</span>
+                    Won the DIFF battel against <span class="text-yellow-400 bg-orange-900 px-2 py-0.5 rounded-full mt-5">{ profile_user_2.nickname}</span>
                 {:else}
-                    Won the DIFF battel against <span class="text-yellow-600">{profile_user_1.nickname}</span>
+                    Won the DIFF battel against <span class="text-yellow-400 bg-orange-900 px-2 py-0.5 rounded-full mt-5">{profile_user_1.nickname}</span>
                 {/if}
             </p>
 

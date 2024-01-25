@@ -6,7 +6,8 @@ export default function OrderByCategory(challenges){
         result[current.category].push({
             name: current.name,
             points: current.points,
-            userDone: current.userDone
+            user_1_flagged: current.user_1_flagged,
+            user_2_flagged: current.user_2_flagged
         })
         
         return result

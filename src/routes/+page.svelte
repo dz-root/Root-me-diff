@@ -33,7 +33,7 @@
 </svelte:head>
 
 
-<div class:hidden={loader} class="flex flex-col items-center justify-center">
+<div class:hidden={loader} class="flex flex-col items-center justify-center w-full">
 
 	<div class="flex flex-col items-center ">
 		<div class="flex flex-col items-center justify-center space-y-4 p-5 border border-indigo-600/30 rounded-lg shadow-xl shadow-indigo-600/20 bg-indigo-900/5">
@@ -41,14 +41,12 @@
 			<input type="text" name="user_1" bind:value={user_1} class="w-full px-5 py-1.5 bg-slate-900 text-indigo-600 rounded-md border border-indigo-600/30 focus:outline-none focus:ring-0 focus:border-indigo-600 placeholder:text-indigo-900" placeholder="User 1" required>
 			<input type="text" name="user_2" bind:value={user_2} class="w-full px-5 py-1.5 bg-slate-900 text-indigo-600 rounded-md border border-indigo-600/30 focus:outline-none focus:ring-0 focus:border-indigo-600 placeholder:text-indigo-900" on:keydown={(e)=> e.key ==='Enter' ? getDiff() : ''} placeholder="User 2" required>
 			<button type="submit" class="w-full font-bold bg-gradient-to-tl shadow-md from-indigo-900 to-indigo-600 text-white px-5 py-1.5 rounded-full hover:bg-gradient-to-tr hover:shadow-indigo-600/50 transition ease-in-out" on:click={()=>getDiff()}> >_ GET Diff</button>
-			<a href="/diff?user_1=Numb3rs&user_2=ech0" class="text-sm text-indigo-500 hover:text-indigo-600 transition ease-in-out">🚀 Try Demo </a>
 		</div>
-		<p class="text-xs text-indigo-800 italic mt-10">Inspired by <a href="https://github.com/0xSoEasY/Root-me-diff" target="_blank" class="underline">0xSoEasY</a></p>
 	</div>
 
 </div>
 
 
-<div class:hidden={!loader} class="flex flex-col items-center justify-center">
+<div class:hidden={!loader} class="w-full h-full flex flex-col items-center justify-center">
 	<img src="./logo.png" alt="loader" class="animate-pulse">
 </div>
