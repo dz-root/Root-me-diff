@@ -6,6 +6,7 @@
     import Accordion from '$lib/components/Accordion.svelte'
     import { slugify } from '$lib/utils/Slugify.js';
     import DiffStats from '$lib/components/DiffStats.svelte';
+    import TakePhoto from '$lib/components/TakePhoto.svelte';
 
     export let data
 
@@ -77,10 +78,11 @@
 
                 <div class="flex hidden sm:block ">
                     <DiffStats user_1={profile_user_1} user_2={profile_user_2}/>    
+                    <TakePhoto {profile_user_1} {profile_user_2}></TakePhoto>
 
                     <button on:click={()=>{ show_bar= !show_bar}} class="group-hover">
                         {#if show_bar}
-                            <svg transition:slide class="w-10 h-10 text-white shadow-lg hover:shadow-indigo-600 hover:text-indgo-600 rounded-md" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <svg transition:slide class="p-1.5 w-10 h-10 text-white shadow-lg hover:shadow-indigo-600 hover:text-indgo-600 rounded-md" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15"></path>
                             </svg>
                         {:else}
@@ -99,11 +101,11 @@
                         
                         <div slot="sub-head" class="flex mt-2 text-sm">
                             <span class="bg-slate-900 text-indigo-500">{result[category].length} Challenges</span>
-                            <button class="flex bg-green-950 text-lime-500 mx-1" on:click={()=>{Highlight(1)}}>
+                            <button class="flex bg-green-950 text-lime-500 mx-1 hover:opacity-80 transition ease-in-out" on:click={()=>{Highlight(1)}}>
                                 <img src="https://root-me.org/{profile_user_1.logo}" alt="" class="w-5">
                                 <span class="mx-2">{profile_user_1.nickname} solved: {result[category].filter((obj) => obj.user_1_flagged === true).length}</span>
                             </button>
-                            <button class="flex bg-green-950 text-lime-500 mx-1" on:click={()=>{Highlight(2)}}>
+                            <button class="flex bg-green-950 text-lime-500 mx-1 hover:opacity-80 transition ease-in-out" on:click={()=>{Highlight(2)}}>
                                 <img src="https://root-me.org/{profile_user_2.logo}" alt="" class="w-5">
                                 <span class="mx-2">{profile_user_2.nickname} solved: {result[category].filter((obj) => obj.user_2_flagged === true).length}</span>
                             </button>
