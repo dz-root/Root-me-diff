@@ -17,6 +17,7 @@ export const load = async ({ request, url, setHeaders }) => {
         stat: { rank: null, score:null, chall_done:null },
         rank_icon : '',
         rank_title : '',
+        link: '',
     }
 
     let profile_user_2 = {
@@ -25,6 +26,7 @@ export const load = async ({ request, url, setHeaders }) => {
         stat: { rank: null, score:null, chall_done:null },
         rank_icon : '',
         rank_title : '',
+        link: '',
     }
 
     setHeaders({
@@ -57,11 +59,12 @@ export const load = async ({ request, url, setHeaders }) => {
             profile_user_1.stat.rank = rank_1;
             profile_user_1.stat.score = score_1;
             profile_user_1.stat.chall_done = chall_done;
-            profile_user_1.logo = (logo[0].attribs.src).split('?')[0];
+            profile_user_1.logo = `https://www.root-me.org/${(logo[0].attribs.src).split('?')[0]}`;
             profile_user_1.nickname = logo[0].attribs.alt;
             profile_user_1.rank_icon = RankIncon(score_1);
+            profile_user_1.link = `https://www.root-me.org/${user_1}`;
+
                 
-        
             links_1.each((i, link) => {
                 const category = link.attribs.href.split("/")[2];
                 const name = cheerio(link).text().split("\xa0")[1];
@@ -86,9 +89,10 @@ export const load = async ({ request, url, setHeaders }) => {
             profile_user_2.stat.rank = rank_2;
             profile_user_2.stat.score = score_2;
             profile_user_2.stat.chall_done = chall_done_2;
-            profile_user_2.logo = (logo_2[0].attribs.src).split('?')[0];
+            profile_user_2.logo = `https://www.root-me.org/${(logo_2[0].attribs.src).split('?')[0]}`;
             profile_user_2.nickname = logo_2[0].attribs.alt;
             profile_user_2.rank_icon = RankIncon(score_2);
+            profile_user_2.link = `https://www.root-me.org/${user_2}`;
                 
             links_2.each((i, link) => {
                 const category = link.attribs.href.split("/")[2];
