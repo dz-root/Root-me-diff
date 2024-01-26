@@ -102,11 +102,11 @@
                         <div slot="sub-head" class="flex mt-2 text-sm">
                             <span class="bg-slate-900 text-indigo-500">{result[category].length} Challenges</span>
                             <button class="flex bg-green-950 text-lime-500 mx-1 hover:opacity-80 transition ease-in-out" on:click={()=>{Highlight(1)}}>
-                                <img src="https://root-me.org/{profile_user_1.logo}" alt="" class="w-5">
+                                <img src="{profile_user_1.logo}" alt="" class="w-5">
                                 <span class="mx-2">{profile_user_1.nickname} solved: {result[category].filter((obj) => obj.user_1_flagged === true).length}</span>
                             </button>
                             <button class="flex bg-green-950 text-lime-500 mx-1 hover:opacity-80 transition ease-in-out" on:click={()=>{Highlight(2)}}>
-                                <img src="https://root-me.org/{profile_user_2.logo}" alt="" class="w-5">
+                                <img src="{profile_user_2.logo}" alt="" class="w-5">
                                 <span class="mx-2">{profile_user_2.nickname} solved: {result[category].filter((obj) => obj.user_2_flagged === true).length}</span>
                             </button>
                             {#if show_filter}

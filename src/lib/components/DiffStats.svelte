@@ -14,7 +14,7 @@
     <button  class="fixed top-10 right-10" on:click={()=> show = !show} >X</button>
     <div class="w-[800px] grid grid-cols-2 gap-4 -full items-center justify-center">
         <div class="flex flex-col">
-            <img src="https://root-me.org/{user_1.logo}" alt="" class="h-36 object-cover rounded-t-md">
+            <img src="{user_1.logo}" alt="" class="h-36 object-cover rounded-t-md">
             <div class="relative min-h-[500px] bg-slate-900">
                 <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center animate-pulse">
                     <svg class="w-6 h-6 mr-2 text-white shadow-lg hover:shadow-indigo-600 rounded-md" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="flex flex-col">
-            <img src="https://root-me.org/{user_2.logo}" alt="" class="h-36 object-cover rounded-t-md">
+            <img src="{user_2.logo}" alt="" class="h-36 object-cover rounded-t-md">
             <div class="relative min-h-[500px] bg-slate-900">
                 <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center animate-pulse">
                     <svg class="w-6 h-6 mr-2 text-white shadow-lg hover:shadow-indigo-600 rounded-md" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

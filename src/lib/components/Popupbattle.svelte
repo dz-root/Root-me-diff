@@ -10,9 +10,9 @@
         <div class="flex flex-col -mt-16">
             <img src="./crown.png" alt="" class="w-24 h-24 -mt-5">
             {#if parseInt(profile_user_1.stat.score) > parseInt(profile_user_2.stat.score)}
-                <img src="https://root-me.org/{profile_user_1.logo}" alt="" class="bg-slate-900 w-24 h-24 border-4 border-yellow-500 rounded-full -mt-16 shadow-lg shadow-yellow-500">
+                <img src="{profile_user_1.logo}" alt="" class="bg-slate-900 w-24 h-24 border-4 border-yellow-500 rounded-full -mt-16 shadow-lg shadow-yellow-500">
             {:else}
-                <img src="https://root-me.org/{profile_user_2.logo}" alt="" class="bg-slate-900 w-24 h-24 border-4 border-yellow-500 rounded-full -mt-16 shadow-lg shadow-yellow-500">
+                <img src="{profile_user_2.logo}" alt="" class="bg-slate-900 w-24 h-24 border-4 border-yellow-500 rounded-full -mt-16 shadow-lg shadow-yellow-500">
             {/if}
         </div>
 
@@ -34,9 +34,9 @@
             </p>
 
             <div class="flex items-center justify-center p-1 mt-5 border border-yellow-600/50 rounded-full space-x-4">
-                <img src="https://root-me.org/{profile_user_1.logo}" alt="" class="w-10 h-10 rounded-full border-2 border-yellow-600/50">
+                <img src="{profile_user_1.logo}" alt="" class="w-10 h-10 rounded-full border-2 border-yellow-600/50">
                 <div class="text-yellow-500 font-bold italic">VS</div>
-                <img src="https://root-me.org/{profile_user_2.logo}" alt="" class="w-10 h-10 rounded-full border-2 border-yellow-600/50">
+                <img src="{profile_user_2.logo}" alt="" class="w-10 h-10 rounded-full border-2 border-yellow-600/50">
             </div>
         </div>
         <img src="./luffy.png" alt="" class="w-24 -mb-2 -mt-5 z-20">

@@ -7,18 +7,18 @@ export let profile_user_2 = {}
 <div class="profile flex flex-col sm:border-x border-indigo-600/20 sm:px-5 py-3">
 
     <div class="flex items-center">
-        <a href="https://www.root-me.org/{profile_user_1.nickname}" target="_blank" class="flex flex-col items-center">
+        <a href="{profile_user_1.link}" target="_blank" class="flex flex-col items-center">
             {#if parseInt(profile_user_1.stat.score) > parseInt(profile_user_2.stat.score) }
                 <img src="./crown.png" alt="" class="w-8 -mt-4 -mb-4 z-90">
-                <img src="https://root-me.org/{profile_user_1.logo}" alt="{profile_user_1.nickname}" title="{profile_user_1.nickname}" class="w-16 h-16 rounded-full border-4 border-yellow-500 shadow-lg shadow-yellow-500">
+                <img src="{profile_user_1.logo}" alt="{profile_user_1.nickname}" title="{profile_user_1.nickname}" class="w-16 h-16 rounded-full border-4 border-yellow-500 shadow-lg shadow-yellow-500">
             {:else}
-                <img src="https://root-me.org/{profile_user_1.logo}" alt="{profile_user_1.nickname}" title="{profile_user_1.nickname}" class="w-16 h-16 rounded-full border-4 border-indigo-900 shadow-lg shadow-indigo-900">
+                <img src="{profile_user_1.logo}" alt="{profile_user_1.nickname}" title="{profile_user_1.nickname}" class="w-16 h-16 rounded-full border-4 border-indigo-900 shadow-lg shadow-indigo-900">
             {/if}
         </a>
         <div class="flex flex-col ml-2">
             <div class="flex items-center sm:mr-5">
                 <img src="{profile_user_1.rank_icon}" alt="" class="w-6 h-6 mr-2">
-                <a href="https://www.root-me.org/{profile_user_1.nickname}" target="_blank" class="text-xl font-bold text-white">{profile_user_1.nickname}</a>
+                <a href="{profile_user_1.link}" target="_blank" class="text-xl font-bold text-white">{profile_user_1.nickname}</a>
             </div>
            <div class="flex">
             <div class="flex items-center px-2">
