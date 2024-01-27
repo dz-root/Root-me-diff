@@ -1,7 +1,7 @@
 ## ⚡️Root-me DIFF 
 
 `root-me-diff` allows  to preview the differences between two Root-me.org users. 
-![Root-me-diff-preview](https://i.ibb.co/mRy3bJb/Notes-Ensure-your-Root-me-org-username-is-correctly-provided-in-the-nickname-parameter-Experiment-wi.png)
+![Root-me-diff-preview](https://i.ibb.co/sKzqrJy/Root-me-DIFF.png)
 [View demo](https://root-me-diff.vercel.app/diff?user_1=numb3rs&user_2=ech0)
 
 
@@ -49,7 +49,7 @@ Special regards for:
 * Evix [Evix](https://www.root-me.org/Evix)
 * Gravis_ [Gravis_](https://www.root-me.org/Gravis_)
 * Leirn [Leirn](https://www.root-me.org/leirn)
-* Mouthon [Mouthon]()
+* Mouthon [Mouthon](https://www.root-me.org/mouthon-396365)
 * Nu1t [Nu1t](https://www.root-me.org/Nu1t)
 * Numb3rs [Numb3rs](https://www.root-me.org/Numb3rs)
 * Oiy [Oiy](https://www.root-me.org/Oiy)
