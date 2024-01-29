@@ -4,8 +4,6 @@ import { redirect } from '@sveltejs/kit'
 import { RankIncon } from '$lib/utils/UserRankIcon.js'
 import OrderByCategory from '$lib/utils/OrderByCategory.js'
 
-
-
 export const load = async ({ request, url, setHeaders }) => {
     
     let result= []
@@ -66,12 +64,12 @@ export const load = async ({ request, url, setHeaders }) => {
 
                 
             links_1.each((i, link) => {
+                const chall_link = `https://www.root-me.org/${link.attribs.href}`;
                 const category = link.attribs.href.split("/")[2];
                 const name = cheerio(link).text().split("\xa0")[1];
                 const points = link.attribs.title.split(" ")[0];
                 const user_1_flagged = link.attribs.class === ' vert';
-        
-                challenges.push({ category, name, points, user_1_flagged });
+                challenges.push({ category, name, points, chall_link, user_1_flagged });
             });
                 
         }else{
@@ -116,8 +114,7 @@ export const load = async ({ request, url, setHeaders }) => {
             })
         })
         
-        result= OrderByCategory(result)
-
+        result = OrderByCategory(result)
         return { profile_user_1, profile_user_2, result}
 
     }else{
@@ -125,4 +122,3 @@ export const load = async ({ request, url, setHeaders }) => {
     }
     
 }
-

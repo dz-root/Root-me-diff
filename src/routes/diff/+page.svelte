@@ -4,7 +4,6 @@
     import CategoryMenu from '$lib/components/CategoryMenu.svelte'
     import ProfileHeader from '$lib/components/ProfileHeader.svelte'
     import Accordion from '$lib/components/Accordion.svelte'
-    import { slugify } from '$lib/utils/Slugify.js';
     import DiffStats from '$lib/components/DiffStats.svelte';
     import TakePhoto from '$lib/components/TakePhoto.svelte';
 
@@ -159,7 +158,7 @@
                                                 {item.points} pts
                                             </span>
                                         </div>
-                                        <a href="https://www.root-me.org/en/Challenges/{category}/{slugify(item.name)}" target="_blank" class="flex text-indigo-600 hover:text-indigo-500 transition ease-in-out">
+                                        <a href="{item.chall_link}" target="_blank" class="flex text-indigo-600 hover:text-indigo-500 transition ease-in-out">
                                             Try it 
                                             <svg class="w-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>

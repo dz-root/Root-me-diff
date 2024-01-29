@@ -7,7 +7,8 @@ export default function OrderByCategory(challenges){
             name: current.name,
             points: current.points,
             user_1_flagged: current.user_1_flagged,
-            user_2_flagged: current.user_2_flagged
+            user_2_flagged: current.user_2_flagged,
+            chall_link: current.chall_link
         })
         
         return result
