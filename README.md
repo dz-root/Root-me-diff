@@ -1,6 +1,7 @@
 ## ⚡️Root-me DIFF 
 
 `root-me-diff` allows  to preview the differences between two Root-me.org users. 
+
 ![Root-me-diff-preview](https://i.ibb.co/sKzqrJy/Root-me-DIFF.png)
 [View demo](https://root-me-diff.vercel.app/diff?user_1=numb3rs&user_2=ech0)
 
@@ -20,7 +21,7 @@ Replace `__username_1__` and `__username_2__` with the Root-me.org usernames you
 
 #### ✨ Example
 ```
-GET https://root-me-diff.vercel.app/diff?user_1=Numb3rs&user_2=ech0
+GET https://root-me-diff.vercel.app/diff?user_1=Numb3rs&user_2=raltheo
 ```
 
 > [!NOTE]
